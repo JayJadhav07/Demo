@@ -25,10 +25,9 @@ class SignUpActivity : AppCompatActivity() {
             val Password = binding.RegEdpassword1.text.toString()
             val Confirmpsw= binding.RegEdpassword2.text.toString()
             val Name = binding.RegEdname.text.toString()
-            val City= binding.RegEdcity.text.toString()
+           // val City= binding.RegEdcity.text.toString()
 
-            if(Name.isNotEmpty() && Email.isNotEmpty() && Password.isNotEmpty() && Confirmpsw.isNotEmpty()
-                && City.isNotEmpty()){
+            if(Name.isNotEmpty() && Email.isNotEmpty() && Password.isNotEmpty() && Confirmpsw.isNotEmpty()){
                 if(Password == Confirmpsw){
                     firebaseAuth.createUserWithEmailAndPassword(Email,Password)
                         .addOnCompleteListener(this){task->
